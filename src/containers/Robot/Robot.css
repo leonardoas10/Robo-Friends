@@ -1,0 +1,125 @@
+.rotate, .rotatetwo {
+    transition: 2s ease-out;
+}
+
+.rotate:hover {
+    transform: rotate(180deg);
+}
+
+.rotatetwo:hover {
+    transform: rotate(360deg);
+}
+
+
+.card {
+    animation: robot-card 10s infinite;
+    height: 300px;
+}
+
+.robot-image {
+    animation: robot-image 10s infinite;
+    animation-delay: 2seg;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    transition: 2s ease-out;
+}
+
+.robot-image:hover {
+    transform: rotate(360deg);
+}
+
+.robot-image-two {
+    animation: robot-image-two 10s infinite;
+    animation-delay: 2seg;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    transition: 2s ease-out;
+}
+
+.robot-image-two:hover {
+    transform: scale(1.8);
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    animation: mymove 10s infinite;
+    transition: 3s ease-out;
+    text-align: center;
+    display: table;
+    top: 80%;
+}
+
+span {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.animationtwo {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    animation: mymovetwo 10s infinite;
+    display: table;
+}
+
+.animationthree {
+    width: 150px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    animation: mymovethree 10s infinite;
+    display: table;
+}
+
+.animation:hover {
+    background-color: orange;
+    transform: scale(1.4);
+}
+
+@keyframes mymove {
+    0% {left: 15%}
+    50% {left: 75%}
+    100% {left: 15%}
+}
+
+@keyframes mymovetwo {
+    0% {left: 50%; top: 50%; z-index: -1;}
+    70.6% {left: 0%; top: 20%; z-index: -1;}
+    100% {left: 50%; top: 50%; z-index: 1; background-color:orange; color: white;}
+}
+
+@keyframes mymovethree {
+    0% {right: 50%; top: 50%; z-index: -1;}
+    70.6% {right: 0%; top: 20%; z-index: -1;}
+    100% {right: 50%; top: 50%; z-index: 1; background-color:orange; color: white;}
+}
+
+
+@keyframes robot-card{
+    0% {}
+    70.6% {}
+    100% {background-color:orange;}
+}
+
+@keyframes robot-image {
+    0% {top: 20%; z-index: 100;}
+    10% {top: 140%; z-index: 100;}
+    30% { left: -150%; z-index: 100;}
+    50% { left: 150%; z-index: 100;}
+    75% { z-index: 100;}
+    100% {top: 20%; z-index: 100;}
+}
+
+@keyframes robot-image-two {
+    0% {top: 20%; z-index: 100;}
+    10% {top: 140%; z-index: 100;}
+    30% { left: 150%; z-index: 100;}
+    50% { left: -150%; z-index: 100;}
+    75% { z-index: 100;}
+    100% {top: 20%; z-index: 100;}
+}
